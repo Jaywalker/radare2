@@ -3045,7 +3045,7 @@ f~switch
 EOF
 RUN
 
-NAME=gcc_5.5.0_64 switch/case flags and meta
+NAME=gcc_5.5.0_64 switch/case flags, meta, hints
 FILE=../bins/jmptbl/test_gcc_5.5.0_64.out
 EXPECT=<<EOF
 0x0000059d 1 switch.0x0000059d
@@ -3078,12 +3078,27 @@ EXPECT=<<EOF
 0x00000870 data Cd 4
 0x00000874 data Cd 4
 0x00000878 data Cd 4
+ 0x00000844 => immbase=10
+ 0x00000848 => immbase=10
+ 0x0000084c => immbase=10
+ 0x00000850 => immbase=10
+ 0x00000854 => immbase=10
+ 0x00000858 => immbase=10
+ 0x0000085c => immbase=10
+ 0x00000860 => immbase=10
+ 0x00000864 => immbase=10
+ 0x00000868 => immbase=10
+ 0x0000086c => immbase=10
+ 0x00000870 => immbase=10
+ 0x00000874 => immbase=10
+ 0x00000878 => immbase=10
 EOF
 CMDS=<<EOF
 aaa
 f~switch
 f~case.
 C~Cd 4
+ah
 EOF
 RUN
 
